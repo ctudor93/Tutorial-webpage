@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> JavaScript quizz</title>
+<meta charset="utf-8"/>
+
+<style>
+body{
+	font-size: 20px;
+	font-family: Arial;
+	color: #333;
+  font-weight: 300;
+  text-align: center;
+  background-color: #f8f6f0;
+}
+h1{
+  font-weight: 300;
+  margin: 0px;
+  padding: 10px;
+  font-size: 20px;
+  background-color: #444;
+  color: #fff;
+}
+.question{
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+.answers {
+  margin-bottom: 20px;
+  text-align: left;
+  display: inline-block;
+}
+.answers label{
+  display: block;
+  margin-bottom: 10px;
+}
+button{
+  font-family: 'Work Sans', sans-serif;
+	font-size: 22px;
+	background-color: #279;
+	color: #fff;
+	border: 0px;
+	border-radius: 3px;
+	padding: 20px;
+	cursor: pointer;
+	margin-bottom: 20px;
+}
+button:hover{
+	background-color: #38a;
+}
+
+.slide{
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+.active-slide{
+  opacity: 1;
+  z-index: 2;
+}
+.quiz-container{
+  position: relative;
+  height: 200px;
+  margin-top: 40px;
+}
+
+
+pre{	font-family:Arial;
+
+}
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: sticky;
+  top: 0px;
+}
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+
+}
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+.dropdown-content {
+  display: none;
+  position: sticky;
+  top: 0px;
+  background-color: #f9f9f9;
+  min-width: 160px;
+}
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+
+</style>
+</head>
+
+
+
+
+
+<body>
+<div class="navbar">
+
+	<div class="dropdown">
+    <button class="dropbtn" onclick="location.href='./Tutorial website.html'"> Home 
+	</button>
+  </div> 
+  
+  <div class="dropdown">
+    <button class="dropbtn" onclick="location.href='./HTML Tutorial.html'">HTML 
+    </button>
+    <div class="dropdown-content">
+      <a href="HTML Tutorial.html#Introduction">Introduction</a>
+      <a href="HTML Tutorial.html#Basic Structure">Basic HTML Document Structure</a>
+      <a href="HTML Tutorial.html#Head">Head</a>
+      <a href="HTML Tutorial.html#Body">Body</a>
+	  <a href="HTML Tutorial.html#Tags">Tags</a>
+	  <a href="HTML Tutorial.html#Attributes">Attributes</a>
+	  <a href="HTML Tutorial.html#Lists">Lists</a> 
+	  <a href="HTML Tutorial.html#Inline tags">Inline tags</a> 
+	  <a href="HTML Tutorial.html#Tables">Tables</a> 
+	  <a href="HTML Tutorial Quizz.html">Take a quizz on HTML</a>
+
+    </div>
+  </div> 
+	<div class="dropdown">
+    <button class="dropbtn" onclick="location.href='./CSS Tutorial.html'">CSS 
+    </button>
+    <div class="dropdown-content">
+      <a href="CSS Tutorial.html#Introduction">Introduction</a>
+      <a href="CSS Tutorial.html#Basic syntax">Basic CSS syntax</a>
+      <a href="CSS Tutorial.html#Selectors">Selectors</a>
+	  <a href="CSS Tutorial.html#Colors">Colors</a>
+	  <a href="CSS Tutorial.html#Background">Background</a>
+      <a href="CSS Tutorial.html#Borders">Borders</a>
+      <a href="CSS Tutorial.html#Margins">Margins</a>
+      <a href="CSS Tutorial.html#Padding">Padding</a>
+      <a href="CSS Tutorial.html#Box model">Box model</a>
+      <a href="CSS Tutorial.html#Float">Float and Clear</a>
+      <a href="CSS Tutorial.html#Forms">Forms</a>
+	  <a href="CSS Tutorial Quizz.html">Take a quizz on CSS</a>
+    </div>
+  </div> 
+  
+  <div class="dropdown">
+    <button class="dropbtn" onclick="location.href='./JavaScript Tutorial.html'">JavaScript
+    </button>
+    <div class="dropdown-content">
+      <a href="JavaScript Tutorial.html#Introduction">Introduction</a>
+	  <a href="JavaScript Tutorial.html#Variables">Variables</a>
+	  <a href="JavaScript Tutorial.html#Operators">Operators</a>
+	  <a href="JavaScript Tutorial.html#Arrays">Arrays</a>
+	  <a href="JavaScript Tutorial.html#For Loop">For Loop</a>
+	  <a href="JavaScript Tutorial.html#Conditional Statements">Conditional Statements</a>
+	  <a href="JavaScript Tutorial.html#Functions">Functions</a>
+	  <a href="JavaScript Tutorial.html#Comments">Comments</a>
+	  <a href="JavaScript Tutorial Quizz.html">Take a quiz on JavaScript</a>
+    </div>
+  </div> 
+</div>
+
+<h1>JavaScript quiz</h1>
+<div class="quiz-container">
+  <div id="quiz"></div>
+</div>
+<button id="previous" onclick="unmove()">Previous Question</button>
+<button id="next" onclick="move()">Next Question</button>
+<button id="submit">Submit Quiz</button>
+<div id="results"></div>
+
+
+
+<script>
+(function() {
+  const myQuestions = [
+    {
+      question: "1.How do you create a function in JavaScript?",
+      answers: {
+        a: "function.myFunction()",
+        b: "function=myFunction()",
+        c: "function myFunction()"
+      },
+      correctAnswer: "c"
+    },
+    {
+      question: "2.Inside which HTML element do we put the JavaScript?",
+      answers: {
+        a: "&ltjs&gt",
+        b: "&ltjavascript&gt",
+        c: "&ltscript&gt"
+		
+	  },
+      correctAnswer: "c"
+    },
+    {
+      question: "3.How do you call a function named myFunction() ?",
+      answers: {
+        a: "myFunction()",
+        b: "function myFunction()",
+        c: "call function myFunction()",
+        
+      },
+      correctAnswer: "b"
+    },
+    {
+      question: "4.How do you add a single line comment in JavaScript ",
+      answers: {
+        a: "//",
+        b: "/**/",
+        c: "neither"
+      },
+      correctAnswer: "a"
+    },
+    {
+      question: "5.How do you insert a multiple line comment",
+      answers: {
+        a: "//this is multi-line",
+        b: "&lt!--this is multi-line--&gt",
+        c: "/*this is multi-line*/"
+      },
+      correctAnswer: "c"
+    },
+	{
+      question: "6.What is the syntax of a FOR loop",
+      answers: {
+        a: "for i=0;i&lt=n;i++",
+        b: "for(i=0;i&lt=n;i++)",
+        c: "for i=0;int i&lt=n;i++"
+      },
+      correctAnswer: "b"
+    },
+	{
+      question: "7.How do you start a WHILE loop?",
+      answers: {
+        a: "while(i&lt=10)",
+        b: "while i&lt=10",
+        c: "while{i&lt=10}"
+      },
+      correctAnswer: "a"
+    },{
+      question: "8.What is the correct JavaScript syntax to change the content of the HTML element &ltp id=&quotdemo&quot&gtThis is a demonstration.&lt/p&gt?",
+      answers: {
+        a: "document.getElementById(&quotdemo&quot).innerHTML=&quotHello world&quot",
+        b: "document.getElementById(#demo).innerHTML=&quotHello world&quot"
+      },
+      correctAnswer: "a"
+    },{
+      question: "9.What is the correct way to write a JavaScript array",
+      answers: {
+        a: "var colors=[&quotred&quot,&quotgreen&quot,&quotblue&quot]",
+        b: "array colors=[&quotred&quot,&quotgreen&quot,&quotblue&quot]",
+        c: "var colors={&quotred&quot,&quotgreen&quot,&quotblue&quot}"
+      },
+      correctAnswer: "a"
+    },{
+      question: "10.Where is the correct place to insert a JavaScript?",
+      answers: {
+        a: "&ltbody&gt",
+        b: "&lthead&gt",
+        c: "both"
+      },
+      correctAnswer: "a"
+    },{
+      question: "11.How to write an IF statement in JavaScript?",
+      answers: {
+        a: "if(i==5)then",
+        b: "if i==5",
+        c: "if(i=5)"
+      },
+      correctAnswer: "c"
+    },{
+      question: "12.How to write an IF statement for executing some code if &quoti&quot is NOT equal to 5?",
+      answers: {
+        a: "if i&lt&gt5",
+        b: "if i&gt5 and i&lt5",
+        c: "if(i!=5)"
+      },
+      correctAnswer: "c"
+    },{
+      question: "13.JavaScript is the same as Java.",
+      answers: {
+        a: "False",
+        b: "True",
+        c: "Trick question, skip"
+      },
+      correctAnswer: "a"
+    },{
+      question: "14.How do you declare a JavaScript variable?",
+      answers: {
+        a: "var",
+        b: "variable",
+        c: "v"
+      },
+      correctAnswer: "a"
+    },{
+      question: "15.Which operator is used to assign a value to a variable?",
+      answers: {
+        a: "&quot-&quot",
+        b: "&quot=&quot",
+        c: "&quot+&quot"
+      },
+      correctAnswer: "b"
+    }
+
+	
+  ];
+
+  function buildQuiz() {
+    // we'll need a place to store the HTML output
+    const output = [];
+
+    // for each question...
+    myQuestions.forEach((currentQuestion, questionNumber) => {
+      // we'll want to store the list of answer choices
+      const answers = [];
+
+      // and for each available answer...
+      for (letter in currentQuestion.answers) {
+        // ...add an HTML radio button
+        answers.push(
+          `<label>
+             <input type="radio" name="question${questionNumber}" value="${letter}">
+              ${letter} :
+              ${currentQuestion.answers[letter]}
+           </label>`
+        );
+      }
+
+      // add this question and its answers to the output
+      output.push(
+        `<div class="slide">
+           <div class="question"> ${currentQuestion.question} </div>
+           <div class="answers"> ${answers.join("")} </div>
+         </div>`
+      );
+    });
+
+    // finally combine our output list into one string of HTML and put it on the page
+    quizContainer.innerHTML = output.join("");
+  }
+
+  function showResults() {
+    // gather answer containers from our quiz
+    const answerContainers = quizContainer.querySelectorAll(".answers");
+
+    // keep track of user's answers
+    let numCorrect = 0;
+
+    // for each question...
+    myQuestions.forEach((currentQuestion, questionNumber) => {
+      // find selected answer
+      const answerContainer = answerContainers[questionNumber];
+      const selector = `input[name=question${questionNumber}]:checked`;
+      const userAnswer = (answerContainer.querySelector(selector) || {}).value;
+
+      // if answer is correct
+      if (userAnswer === currentQuestion.correctAnswer) {
+        // add to the number of correct answers
+        numCorrect++;
+
+        // color the answers green
+        answerContainers[questionNumber].style.color = "lightgreen";
+      } else {
+        // if answer is wrong or blank
+        // color the answers red
+        answerContainers[questionNumber].style.color = "red";
+      }
+    });
+
+    // show number of correct answers out of total
+    resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
+  }
+
+  function showSlide(n) {
+    slides[currentSlide].classList.remove("active-slide");
+    slides[n].classList.add("active-slide");
+    currentSlide = n;
+    
+    if (currentSlide === 0) {
+      previousButton.style.display = "none";
+    } else {
+      previousButton.style.display = "inline-block";
+    }
+    
+    if (currentSlide === slides.length - 1) {
+      nextButton.style.display = "none";
+      submitButton.style.display = "inline-block";
+    } else {
+      nextButton.style.display = "inline-block";
+      submitButton.style.display = "none";
+    }
+  }
+
+  function showNextSlide() {
+    showSlide(currentSlide + 1);
+  }
+
+  function showPreviousSlide() {
+    showSlide(currentSlide - 1);
+  }
+
+  const quizContainer = document.getElementById("quiz");
+  const resultsContainer = document.getElementById("results");
+  const submitButton = document.getElementById("submit");
+
+  // display quiz right away
+  buildQuiz();
+
+  const previousButton = document.getElementById("previous");
+  const nextButton = document.getElementById("next");
+  const slides = document.querySelectorAll(".slide");
+  let currentSlide = 0;
+
+  showSlide(0);
+
+  // on submit, show results
+  submitButton.addEventListener("click", showResults);
+  previousButton.addEventListener("click", showPreviousSlide);
+  nextButton.addEventListener("click", showNextSlide);
+})();
+
+
+</script>
+
+<script>
+var width = 7;
+function move() {
+    var elem = document.getElementById("myBar"); 
+    
+    
+        if (width < 98) {
+            width=width+7; 
+            elem.style.width = width + '%'; 
+            elem.innerHTML = width * 1 + '%';
+        } else {
+            width=width+2; 
+            elem.style.width = width + '%'; 
+            elem.innerHTML = width * 1 + '%';
+        }
+    
+}
+function unmove(){
+	var elem= document.getElementById("myBar")
+	
+	if(width>=14)
+	width-=7;
+	elem.style.width = width - '%'; 
+    elem.innerHTML = width * 1 - '%';
+}
+</script>
+
+
+
+
+<div id="myBar" style = "width:7%; background-color:green;">7%</div>
+	
+
+</body>
+
+</html>

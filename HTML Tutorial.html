@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> HTML tutorial </title>
+<meta charset="utf-8"/>
+
+<style>
+body{
+	font-size: 20px;
+	font-family: Arial;
+	color: #333;
+  font-weight: 300;
+  text-align: center;
+  background-color: #f8f6f0;
+}
+h1{
+  font-weight: 300;
+  margin: 0px;
+  padding: 10px;
+  font-size: 20px;
+  background-color: #444;
+  color: #fff;
+}
+pre{	font-family:Arial;
+		text-align:left;
+
+}
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: sticky;
+  top: 0px;
+}
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+
+}
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+.dropdown-content {
+  display: none;
+  position: sticky;
+  top: 0px;
+  background-color: #f9f9f9;
+  min-width: 160px;
+}
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+</style>
+</head>
+
+<body>
+<div class="navbar">
+
+	<div class="dropdown">
+    <button class="dropbtn" onclick="location.href='./Tutorial website.html'"> Home 
+	</button>
+  </div> 
+  
+  <div class="dropdown">
+    <button class="dropbtn" onclick="location.href='./HTML Tutorial.html'">HTML 
+    </button>
+    <div class="dropdown-content">
+      <a href="HTML Tutorial.html#Introduction">Introduction</a>
+      <a href="HTML Tutorial.html#Basic Structure">Basic HTML Document Structure</a>
+      <a href="HTML Tutorial.html#Head">Head</a>
+      <a href="HTML Tutorial.html#Body">Body</a>
+	  <a href="HTML Tutorial.html#Tags">Tags</a>
+	  <a href="HTML Tutorial.html#Attributes">Attributes</a>
+	  <a href="HTML Tutorial.html#Lists">Lists</a> 
+	  <a href="HTML Tutorial.html#Inline tags">Inline tags</a> 
+	  <a href="HTML Tutorial.html#Tables">Tables</a> 
+	  <a href="HTML Tutorial Quizz.html">Take a quizz on HTML</a>
+
+    </div>
+  </div> 
+	<div class="dropdown">
+    <button class="dropbtn" onclick="location.href='./CSS Tutorial.html'">CSS 
+    </button>
+    <div class="dropdown-content">
+      <a href="CSS Tutorial.html#Introduction">Introduction</a>
+      <a href="CSS Tutorial.html#Basic syntax">Basic CSS syntax</a>
+      <a href="CSS Tutorial.html#Selectors">Selectors</a>
+	  <a href="CSS Tutorial.html#Colors">Colors</a>
+	  <a href="CSS Tutorial.html#Background">Background</a>
+      <a href="CSS Tutorial.html#Borders">Borders</a>
+      <a href="CSS Tutorial.html#Margins">Margins</a>
+      <a href="CSS Tutorial.html#Padding">Padding</a>
+      <a href="CSS Tutorial.html#Box model">Box model</a>
+      <a href="CSS Tutorial.html#Float">Float and Clear</a>
+      <a href="CSS Tutorial.html#Forms">Forms</a>
+	  <a href="CSS Tutorial Quizz.html">Take a quizz on CSS</a>
+    </div>
+  </div> 
+  
+  <div class="dropdown">
+    <button class="dropbtn" onclick="location.href='./JavaScript Tutorial.html'">JavaScript
+    </button>
+    <div class="dropdown-content">
+      <a href="JavaScript Tutorial.html#Introduction">Introduction</a>
+	  <a href="JavaScript Tutorial.html#Variables">Variables</a>
+	  <a href="JavaScript Tutorial.html#Operators">Operators</a>
+	  <a href="JavaScript Tutorial.html#Arrays">Arrays</a>
+	  <a href="JavaScript Tutorial.html#For Loop">For Loop</a>
+	  <a href="JavaScript Tutorial.html#Conditional Statements">Conditional Statements</a>
+	  <a href="JavaScript Tutorial.html#Functions">Functions</a>
+	  <a href="JavaScript Tutorial.html#Comments">Comments</a>
+	  <a href="JavaScript Tutorial Quizz.html">Take a quiz on JavaScript</a>
+    </div>
+  </div> 
+</div>
+
+
+<h1 id="Introduction">Introduction</h1>
+<pre>
+
+	HTML was originally designed to be very simple and handle text-based documents.<br>
+	As the web became popular and browsers developed, new features were added to subsequent versions.
+	
+	Structure is important in HTML for a number of reasons:
+	–Allows for consistent rendering in browsers
+	–Means users can take advantage of accessibility features for display and navigation of pages
+	–Makes editing and maintaining documents easier
+	–Gives page authors full access to style sheet and scripting features
+</pre>
+	
+	
+
+<h1 id="Basic Structure"> <br>Basic HTML Document Structure </h1>
+<pre>
+	An HTML document is composed of three parts:
+	1. A line containing HTML version information
+	2. A declarative header section (delimited by the <a href="HTML Tutorial.html#Head">&lthead&gt</a> element)
+	3. A body, which contains the document's actual content…implemented by the <a href="HTML Tutorial.html#Body">&ltbody&gt</a> element…
+
+	Sections 2 and 3 should be delimited by the &lthtml&gt element
+			-<a href="http://www.w3.org/TR/html401/struct/global.html">http://www.w3.org/TR/html401/struct/global.html</a>
+</pre>	
+	
+	
+<h1 id="Head"><br>Head</h1>
+<pre>
+	The &lthead&gt element is a container for all the head elements.
+
+	The &lthead&gt element can include a title for the document, scripts, styles, meta information, and more.
+
+	The following elements can go inside the &lthead&gt element:
+
+	&lttitle&gt (this element is required in an HTML document)
+	&ltstyle&gt
+	&ltbase&gt
+	&ltlink&gt
+	&ltmeta&gt
+	&ltscript&gt
+	&ltnoscript&gt
+	
+	Here you can find the W3School page on the head tag <a href="https://www.w3schools.com/tags/tag_head.asp">Click me</a>
+</pre>
+	
+	
+
+	
+<h1 id="Body"><br>Body</h1>
+	
+<pre>
+	The &ltbody&gt tag defines the document's body.
+
+	The &ltbody&gt element contains all the contents of an HTML document, such as text, hyperlinks, images, tables, lists, etc.
+	
+	Its final appearance may be influenced by information from the &lthead&gt (scripts, style sheets etc)
+	
+	<img style="width:1000px;height:200px;" src="images/Body Example.PNG" alt="Example of body" title="Example of body">
+	
+	Here you can find the W3School page on the body tag <a href="https://www.w3schools.com/tags/tag_body.asp">Click me</a>
+	
+</pre>
+	
+	
+
+<h1 id="Tags"><br>Tags</h1>
+<pre>
+	Tags are wrapped around &lt and &gt and they can be used inside the head as well as the body.
+
+	The &ltheader&gt tag,for example, represents a container for introductory content or a set of navigational links.	
+	
+	<img style="width:1200px;height:400px;" src="images/Header Example.PNG" alt="Example of headers" title="Example of tags">
+
+	You can have several elements with the same tag in one document, multiple h1 tags for example.
+	
+	Some tags are not paired (never enclose any content), such as &lt/br&gt which is used to go to the next line.
+	
+	
+	Here you can find the W3School page on tags <a href="https://www.w3schools.com/tags/" >Click me</a>
+
+</pre>
+
+<h1 id="Attributes"> <br>Attributes</h1>
+<pre>
+	Attributes provide additional information about HTML elements.
+	
+	They are declared in the opening tag.
+		&ltdiv id="content-block-1"&gtcontent&lt/div&gt
+	
+	Self-closing tags can contain attributes too.
+		&ltimg src="logo.gif" alt="My Logo" /&gt
+
+	Next I will give example of some attributes.
+	
+	The href Attribute:
+	HTML links are defined with the &lta&gt tag. The link address is specified in the href attribute:
+	&lta href="https://www.google.com"&gt<a href="https://www.google.com">This is a link</a>&lt/a&gt
+
+	The src Attribute
+	HTML images are defined with the &ltimg&gt tag.
+	The filename of the image source is specified in the src attribute:
+	&ltimg src="Puppy image.jpg"&gt
+	<img src="images/Puppy image.jpg" title="Image of a puppy">
+	
+	The title Attribute
+	The title attribute provides a descriptive tag for the image when hovered over
+	&ltimg src="Puppy image.jpg" title="Picture of a puppy"&gt
+	<img src="images/Puppy image.jpg" title="Picture of a puppy">
+	
+	The width and height Attributes
+	Images in HTML have a set of size attributes, which specifies the width and height of the image:
+	&ltimg src="Puppy image.jpg" width="300" height="200"&gt
+	<img src="images/Puppy image.jpg" width="300" height="200" title="Image of a puppy">
+	
+	The alt Attribute
+	The alt attribute specifies an alternative text to be used, when an image cannot be displayed.
+	The value of the attribute can be read by screen readers. This way, someone "listening" to the webpage, e.g. a vision impaired person, can "hear" the element.
+	&ltimg src="wrong image name.jpg" alt="Non-existent image"&gt
+	<img src="images/wrong image name.jpg" alt="Non-existent image" title="Non-existent image">
+	Here you can find the W3School page on attributes <a href="https://www.w3schools.com/html/html_attributes.asp">Click me</a>
+</pre>
+
+<h1 id="Lists"> <br>Lists </h1>	
+<pre>
+	There are 3 types of lists supported by HTML:
+	-unordered(with bullet points)
+	-ordered(with numbers)
+	-description lists(with descriptive terms for each element of the list
+	
+	I will now through each type of list with examples.
+	
+	First, the unordered list.
+	An unordered list starts with the &ltul&gt tag and each list item starts with the &ltli&gt tag.
+	The list items will be marked with bullets (small black circles) by default, but you can choose between a variety of symbols:
+	<img src="images/Unordered symbol example.PNG" alt="Example of unordered list with different symbols for each element" width="1400" height="400" title="Example of unordered list with different symbols for each element">
+
+	Then, there are ordered lists.
+	They use the type attribute of the &ltol&gt tag to define the type of the list item marker:
+	<img src="images/Ordered list example.PNG" alt="Example of ordered list with different counters for each element" width="1400" height="400" title="Example of ordered list with different counters for each element">
+
+	And the third type is description lists.
+	A description list is a list of terms, with a description of each term.
+
+	The &ltdl&gt tag defines the description list, the &ltdt&gt tag defines the term (name), and the &ltdd&gt tag describes each term:
+	<img src="images/Description list example.PNG" alt="Example of description list with different descriptions for each element" width="1400" height="400" title="Example of description list with different descriptions for each element">
+
+	Lists can also be nested inside other lists, by putting an &ltul&gt,&ltol&gt or &ltdl&gt tag inside either a &ltli&gt tag or a &ltdt&gt tag.
+	Here you can find the W3School page on lists <a href="https://www.w3schools.com/html/html_lists.asp">Click me</a>
+</pre>
+
+<h1 id="Inline tags"><br>Inline tags</h1>
+<pre>
+	An inline element does not start on a new line and only takes up as much width as necessary.
+	Here is an example of some possible inline tags.
+	<img src="images/Inline tags example.PNG" style="width:1200px;height:400px;" alt="Examples of inline tags" title="Examples of inline tags">
+	
+	Here you can find a list of different inline tags <a href="https://www.w3schools.com/html/html_blocks.asp"> Click me</a>
+</pre>
+
+<h1 id="Tables"><br>Tables</h1>
+
+<pre>
+	Tables have been introduced into HTML to describe tabular data
+	An HTML table is defined with the &lttable&gt tag.
+	Each table row is defined with the &lttr&gt tag. A table header is defined with the &ltth&gt tag. 
+	By default, table headings are bold and centered. A table data/cell is defined with the &lttd&gt tag.
+	<img src="images/Table example.PNG" style="width:1200px;height:400px;" alt="Example of a table" title="Example of a table">
+	
+	If you do not specify a border for the table, it will be displayed without borders.
+	Here is the W3School page on tables <a href="https://www.w3schools.com/html/html_tables.asp">Click me</a>
+	
+</pre>
+
+
+<div>	  <a href="HTML Tutorial Quizz.html">Take a quizz on HTML</a></div>
+
+
+
+
+
+
+
+</body>
+</html>

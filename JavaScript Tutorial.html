@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> JavaScript tutorial </title>
+<meta charset="utf-8"/>
+
+
+<style>
+body{
+	font-size: 20px;
+	font-family: Arial;
+	color: #333;
+  font-weight: 300;
+  text-align: center;
+  background-color: #f8f6f0;
+}
+h1{
+  font-weight: 300;
+  margin: 0px;
+  padding: 10px;
+  font-size: 20px;
+  background-color: #444;
+  color: #fff;
+}
+pre{	font-family:Arial;
+		text-align:left;
+
+}
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: sticky;
+  top: 0px;
+}
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+
+}
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+.dropdown-content {
+  display: none;
+  position: sticky;
+  top: 0px;
+  background-color: #f9f9f9;
+  min-width: 160px;
+}
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+</style>
+</head>
+
+<body>
+<div class="navbar">
+
+	<div class="dropdown">
+    <button class="dropbtn" onclick="location.href='./Tutorial website.html'">Home 
+    </button>
+	</div> 
+	
+	<div class="dropdown">
+    <button class="dropbtn" onclick="location.href='./HTML Tutorial.html'"> HTML 
+	</button>
+    <div class="dropdown-content">
+      <a href="HTML Tutorial.html#Introduction">Introduction</a>
+      <a href="HTML Tutorial.html#Basic Structure">Basic HTML Document Structure</a>
+      <a href="HTML Tutorial.html#Head">Head</a>
+      <a href="HTML Tutorial.html#Body">Body</a>
+	  <a href="HTML Tutorial.html#Tags">Tags</a>
+	  <a href="HTML Tutorial.html#Attributes">Attributes</a>
+	  <a href="HTML Tutorial.html#Lists">Lists</a> 
+	  <a href="HTML Tutorial.html#Inline tags">Inline tags</a> 
+	  <a href="HTML Tutorial.html#Tables">Tables</a> 
+	  <a href="HTML Tutorial Quizz.html">Take a quizz on HTML</a>
+    </div>
+  </div> 
+  
+	<div class="dropdown">
+    <button class="dropbtn" onclick="location.href='./CSS Tutorial.html'">CSS 
+    </button>
+    <div class="dropdown-content">
+      <a href="CSS Tutorial.html#Introduction">Introduction</a>
+      <a href="CSS Tutorial.html#Basic syntax">Basic CSS syntax</a>
+      <a href="CSS Tutorial.html#Selectors">Selectors</a>
+	  <a href="CSS Tutorial.html#Colors">Colors</a>
+	  <a href="CSS Tutorial.html#Background">Background</a>
+      <a href="CSS Tutorial.html#Borders">Borders</a>
+      <a href="CSS Tutorial.html#Margins">Margins</a>
+      <a href="CSS Tutorial.html#Padding">Padding</a>
+      <a href="CSS Tutorial.html#Box model">Box model</a>
+      <a href="CSS Tutorial.html#Float">Float and Clear</a>
+      <a href="CSS Tutorial.html#Forms">Forms</a>
+	  <a href="CSS Tutorial Quizz.html">Take a quizz on CSS</a>
+    </div>
+  </div> 
+  
+  <div class="dropdown">
+    <button class="dropbtn" onclick="location.href='./JavaScript Tutorial.html'">JavaScript
+    </button>
+    <div class="dropdown-content">
+	  <a href="JavaScript Tutorial.html#Introduction">Introduction</a>
+	  <a href="JavaScript Tutorial.html#Variables">Variables</a>
+	  <a href="JavaScript Tutorial.html#Operators">Operators</a>
+	  <a href="JavaScript Tutorial.html#Arrays">Arrays</a>
+	  <a href="JavaScript Tutorial.html#For Loop">For Loop</a>
+	  <a href="JavaScript Tutorial.html#Conditional Statements">Conditional Statements</a>
+	  <a href="JavaScript Tutorial.html#Functions">Functions</a>
+	  <a href="JavaScript Tutorial.html#Comments">Comments</a>
+	  <a href="JavaScript Tutorial Quizz.html">Take a quiz on JavaScript</a>
+    </div>
+  </div> 
+ 
+</div>
+
+
+<h1 id="Introduction">Introduction</h1>
+<pre>
+
+	JavaScript is a scripting language that executes in the Web
+	browser on the client machine
+	– The browser has a JavaScript interpreter and is the script execution environment
+	JavaScript is embedded in XHTML, i.e. the code to run arrives with the web page
+	JavaScript is an imperative language with C-style syntax, which has dynamic typing and runtime evaluation
+	The only connection to Java is in the name and core C-style syntax.
+	
+	<a href="https://www.w3schools.com/js/js_intro.asp">Here</a> is the W3Schools introductory page for JavaScript.
+</pre>
+
+<h1 id="Variables">Variables</h1>
+<pre>
+
+	JavaScript variables are containers for storing data values.
+	<img src="images/Variables example.PNG" style="width:1000px;height:400px;" title="Image of variables in java" alt="Image of variables in java">
+	
+	In programming, just like in algebra, we use variables (like price1) to hold values.
+	In programming, just like in algebra, we use variables in expressions (total = price1 + price2).
+	JavaScript variables are containers for storing data values.
+	All JavaScript variables must be identified with unique names.
+
+	These unique names are called identifiers.
+
+	Identifiers can be short names (like x and y) or more descriptive names (age, sum, totalVolume).
+
+	The general rules for constructing names for variables (unique identifiers) are:
+
+	Names can contain letters, digits, underscores, and dollar signs.
+	Names must begin with a letter
+	Names can also begin with $ and _ .
+	Names are case sensitive (y and Y are different variables)
+	Reserved words (like JavaScript keywords) cannot be used as names
+	JavaScript identifiers are case-sensitive.
+	
+	Creating a variable in JavaScript is called "declaring" a variable.
+	You declare a JavaScript variable with the var keyword:
+	var carName;
+	After the declaration, the variable has no value (technically it has the value of undefined).
+	To assign a value to the variable, use the equal sign:
+	carName = "Volvo";
+	You can also assign a value to the variable when you declare it:
+	var carName = "Volvo";
+
+	You can declare many variables in one statement.
+	Start the statement with var and separate the variables by comma:
+	var person = "John Doe", carName = "Volvo", price = 200;
+
+	It's a good programming practice to declare all variables at the beginning of a script.
+
+	<a href="https://www.w3schools.com/js/js_variables.asp">Here</a> ia the W3Schools page on variables.
+	
+</pre>
+
+<h1 id="Operators">Operators</h1>
+<pre>
+
+	Operators assign values to variables and add them together:
+	var x = 5;         // assign the value 5 to x
+	var y = 2;         // assign the value 2 to y
+	var z = x + y;     // assign the value 7 to z (x + y)
+
+	The assignment operator (=) assigns a value to a variable.
+	The addition operator (+) adds numbers.
+	The subtraction operator (-) subtracts numbers.
+	The multiplication operator (*) multiplies numbers.
+	The division operator (/) divides numbers.
+	The modulus operator (%) returns the division remainder.
+	The increment operator (++) increments numbers.
+	The decrement operator (--) decrements numbers.
+	The exponentiation operator (**) raises the first operand to the power of the second operand.
+	The + operator can also be used to add (concatenate) strings.
+
+
+	<a href="https://www.w3schools.com/js/js_arithmetic.asp">Here</a> is a more detailed list of arithmetic operations in JavaScript.
+	And<a href="https://www.w3schools.com/js/js_operators.asp"> here </a> is a more detailed list about operators in JavaScript.
+
+</pre>
+
+<h1 id="Arrays">Arrays</h1>
+<pre>
+
+	JavaScript arrays are used to store multiple values in a single variable:
+	var cars = ["Saab", "Volvo", "BMW"];
+
+	An array is a special variable, which can hold more than one value at a time.
+	If you have a list of items (a list of car names, for example), storing the cars in single variables could look like this:
+	var car1 = "Saab";
+	var car2 = "Volvo";
+	var car3 = "BMW";
+
+	However, what if you want to loop through the cars and find a specific one? And what if you had not 3 cars, but 300?
+	The solution is an array!
+	An array can hold many values under a single name, and you can access the values by referring to an index number.
+
+	Using an array literal is the easiest way to create a JavaScript Array.
+	Syntax:
+
+	var array_name = [item1, item2, ...];       
+
+	Spaces and line breaks are not important. A declaration can span multiple lines:
+	var cars = [
+	"Saab",
+	"Volvo",
+	"BMW"
+	];
+
+	You access an array element by referring to the index number.
+
+	This statement accesses the value of the first element in cars:
+	Array indexes start with 0.
+	[0] is the first element. [1] is the second element.
+	var name = cars[0];
+
+	This statement changes the value of the first element in cars:
+	cars[0] = "Opel";
+	
+	<a href="https://www.w3schools.com/js/js_arrays.asp">Here</a> is the W3Schools page on arrays.
+
+</pre>
+
+<h1 id="For Loop">For Loop</h1>
+<pre>
+	Loops can execute a block of code a number of times.
+	
+	Loops are handy, if you want to run the same code over and over again, each time with a different value.
+	Often this is the case when working with arrays:
+	Instead of writing:
+	text += cars[0] + "&ltb&gt"; 
+	text += cars[1] + "&ltb&gt"; 
+	text += cars[2] + "&ltb&gt"; 
+	text += cars[3] + "&ltb&gt"; 
+	text += cars[4] + "&ltb&gt"; 
+	text += cars[5] + "&ltb&gt";
+
+	You can write:
+	var i;
+	for (i = 0; i &lt cars.length; i++) { 
+	text += cars[i] + "&ltb&gt";
+	}
+
+	JavaScript supports different kinds of loops:
+
+	for - loops through a block of code a number of times
+	for/in - loops through the properties of an object
+	while - loops through a block of code while a specified condition is true
+	do/while - also loops through a block of code while a specified condition is true
+
+	The For Loop
+	The for loop has the following syntax:
+
+	for (statement 1; statement 2; statement 3) {
+	// code block to be executed
+	}
+	
+	Statement 1 is executed (one time) before the execution of the code block.
+
+	Statement 2 defines the condition for executing the code block.
+
+	Statement 3 is executed (every time) after the code block has been executed.
+
+
+	The JavaScript for/in statement loops through the properties of an object:
+	var person = {fname:"John", lname:"Doe", age:25}; 
+
+	var text = "";
+	var x;
+	for (x in person) {
+	text += person[x];
+	}
+	
+	The while loop loops through a block of code as long as a specified condition is true.
+
+	Syntax
+	while (condition) {
+	// code block to be executed
+	}
+	If you forget to increase the variable used in the condition, the loop will never end. This will crash your browser.
+	
+	
+	The do/while loop is a variant of the while loop. This loop will execute the code block once, before checking if the condition is true, then it will repeat the loop as long as the condition is true.
+
+	Syntax
+	do {
+	// code block to be executed
+	}
+	while (condition);
+	
+	<a href="https://www.w3schools.com/js/js_loop_for.asp">Here</a> is the W3Schools page on loops.
+
+</pre>
+
+<h1 id="Conditional Statements">Conditional Statements</h1>
+<pre>
+
+	Conditional statements are used to perform different actions based on different conditions.
+	Very often when you write code, you want to perform different actions for different decisions.
+
+	You can use conditional statements in your code to do this.
+
+	In JavaScript we have the following conditional statements:
+
+	Use if to specify a block of code to be executed, if a specified condition is true
+	Use else to specify a block of code to be executed, if the same condition is false
+	Use else if to specify a new condition to test, if the first condition is false
+	Use switch to specify many alternative blocks of code to be executed
+	
+	
+	Use the if statement to specify a block of JavaScript code to be executed if a condition is true.
+
+	Syntax
+	if (condition) {
+	//  block of code to be executed if the condition is true
+	}
+	Note that if is in lowercase letters. Uppercase letters (If or IF) will generate a JavaScript error.
+	
+	
+	Use the else statement to specify a block of code to be executed if the condition is false.
+
+	if (condition) {
+	//  block of code to be executed if the condition is true
+	} else { 
+	//  block of code to be executed if the condition is false
+	}
+	
+	
+	Use the else if statement to specify a new condition if the first condition is false.
+
+	Syntax
+	if (condition1) {
+	//  block of code to be executed if condition1 is true
+	} else if (condition2) {
+	//  block of code to be executed if the condition1 is false and condition2 is true
+	} else {
+	//  block of code to be executed if the condition1 is false and condition2 is false
+	}
+	
+	
+	Use the switch statement to select one of many code blocks to be executed.
+
+	Syntax
+	switch(expression) {
+		case x:
+		  // code block
+		  break;
+		case y:
+		  // code block
+		  break;
+		default:
+		  // code block
+	}
+		
+	This is how it works:
+	The switch expression is evaluated once.
+	The value of the expression is compared with the values of each case.
+	If there is a match, the associated block of code is executed.
+	
+	When JavaScript reaches a break keyword, it breaks out of the switch block.
+	This will stop the execution of inside the block.
+	It is not necessary to break the last case in a switch block. The block breaks (ends) there anyway.
+	Note: If you omit the break statement, the next case will be executed even if the evaluation does not match the case.
+	
+	The default keyword specifies the code to run if there is no case match.
+	
+	<a href="https://www.w3schools.com/js/js_if_else.asp">Here</a> is the W3Schools page on conditional statements.
+	
+</pre>
+
+<h1 id="Functions">Functions</h1>
+<pre>
+	
+	A JavaScript function is a block of code designed to perform a particular task.
+
+	A JavaScript function is executed when "something" invokes it (calls it), for example:
+	function myFunction(p1, p2) {
+		return p1 * p2;   // The function returns the product of p1 and p2
+	}
+	
+	Syntax
+	
+	A JavaScript function is defined with the function keyword, followed by a name, followed by parentheses ().
+
+	Function names can contain letters, digits, underscores, and dollar signs (same rules as variables).
+
+	The parentheses may include parameter names separated by commas:
+	(parameter1, parameter2, ...)
+
+	The code to be executed, by the function, is placed inside curly brackets: {}
+	Function parameters are listed inside the parentheses () in the function definition.
+	Function arguments are the values received by the function when it is invoked.
+	Inside the function, the arguments (the parameters) behave as local variables.
+	A Function is much the same as a Procedure or a Subroutine, in other programming languages.
+
+
+	Function Invocation
+	
+	The code inside the function will execute when "something" invokes (calls) the function:
+
+	-when an event occurs (when a user clicks a button)
+	-when it is invoked (called) from JavaScript code
+	-automatically (self invoked)
+
+	When JavaScript reaches a return statement, the function will stop executing.
+	If the function was invoked from a statement, JavaScript will "return" to execute the code after the invoking statement.
+	Functions often compute a return value. The return value is "returned" back to the "caller".
+	
+	<a href="https://www.w3schools.com/js/js_functions.asp">Here</a> is the W3Schools page on functions.
+	
+</pre>
+
+<h1 id="Comments">Comments</h1>
+<pre>
+
+	JavaScript comments can be used to explain JavaScript code, and to make it more readable.
+	JavaScript comments can also be used to prevent execution, when testing alternative code.
+
+	Single line comments start with //.
+	Any text between // and the end of the line will be ignored by JavaScript (will not be executed).
+	<img src="images/Single line comments example.PNG" style="width:1000px;height:300px;" alt="Example of single line comments" title="Example of single line comments">
+
+	Multi-line comments start with /* and end with */.
+	Any text between /* and */ will be ignored by JavaScript.
+	This example uses a multi-line comment (a comment block) to explain the code:
+	<img src="images/Multiple line comments example.PNG" style="width:1000px;height:300px;" alt="Example of multiple line comments" title="Example of multiple line comments">
+	
+	It is most common to use single line comments.
+	Block comments are often used for formal documentation.
+
+	<a href="https://www.w3schools.com/js/js_comments.asp">Here</a> is the W3Schools page on comments.
+</pre>
+
+<div><a href="JavaScript Tutorial Quizz.html">Take a quizz on JavaScript</a></div>
+
+
+
+
+</body>
+</html>

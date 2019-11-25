@@ -1,0 +1,16 @@
+Lecture notes
+
+https://www.w3schools.com/
+
+https://www.sitepoint.com/simple-javascript-quiz/
+
+https://www.ikhtabirni.com/how-to-make-a-simple-quiz-using-html-javasript-and-css.html
+
+https://www.geeksforgeeks.org/creating-progress-bar-using-javascript/
+
+https://stackoverflow.com/questions/50155924/how-to-increment-the-value-of-a-progress-bar-when-press-a-button-javascript
+
+https://www.w3docs.com/quiz/html-basic
+
+https://www.cssportal.com/css-quiz/
+
